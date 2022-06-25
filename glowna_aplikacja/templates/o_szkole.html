@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Roksa&Wiksa</title>
+
+
+
+  <!-- bootstrap core css -->
+   <link rel="stylesheet" type= "text/css" href="{% static 'glowna_aplikacja/css/bootstrap.css' %}"/>
+  <!-- progress barstle -->
+  <link rel="stylesheet" href=" css/css-circular-prog-bar.css">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type= "text/css" href="{% static 'glowna_aplikacja/css/style.css' %}"/>
+  <!-- responsive style -->
+  <link rel="stylesheet" type= "text/css" href="{% static 'glowna_aplikacja/css/responsive.css' %}"/>
+
+
+
+
+  <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+
+
+</head>
+
+<body>
+  <div class="top_container sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href={% url 'home' %}>
+            <img src="{% static 'glowna_aplikacja/images/logo.png' %}" alt="">
+            <span>
+              Roksa&Wiksa
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href={% url 'home' %}> Strona główna<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href={% url 'o_szkole' %}> O szkole </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'nauczyciele' %}"> Nasi nauczyciele </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'cennik' %}"> Cennik </a>
+                </li>
+                   <li class="nav-item">
+                  <a class="nav-link" href="{% url 'kontakt' %}"> Kontakt </a>
+                </li>
+              </ul>
+        </div>
+    </nav>
+  </div>
+</header>
+
+  </div>
+  <!-- end header section -->
+
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <div class="container">
+      <h2 class="main-heading ">
+        O szkole
+      </h2>
+      <p class="text-center">
+       Stworzyliśmy Szkołę Matematyki, bo wiemy dlaczego
+          matematyka jest ważna oraz jakie problemy z
+          matematyką mają uczniowie i studenci.
+          Wiemy również jak tym kłopotom zaradzić.
+          Jesteśmy przekonani, że w każdym uczniu drzemią
+          niewykorzystane zdolności matematyczne.
+          Naszym celem jest „otwarcie” umysłów młodych
+          ludzi na matematykę. Zarówno tych, którzy mają z
+          nią kłopoty, jak i tych, którzy chcieliby osiągnąć
+          jeszcze lepsze wyniki.
+      </p>
+      <div class="about_img-box ">
+        <img src="{% static 'glowna_aplikacja/images/kids.jpg' %}" alt="" class="img-fluid w-100">
+      </div>
+  </section>
+
+  <script type="text/javascript" src="{% static 'glowna_aplikacja/js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'glowna_aplikacja/js/bootstrap.js' %}"></script>
+  <!-- progreesbar script -->
+
+
+
+</body>
+
+</html>
