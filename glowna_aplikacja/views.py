@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+import smtplib
 
 def home(request):
     return render(request, 'glowna.html', {})
@@ -19,11 +20,9 @@ def kontakt(request):
         szkola = request.POST['szkola']
         email = request.POST['email']
         wiadomosc = request.POST['wiadomosc']
+        wiadomosc_mail = '{} ze szkoły {} wysłał wiadomosc: {}'.format(imie, szkola, wiadomosc)
 
-        wiadomosc_mail = '{} ze szkoły {} : {}'.format(imie, szkola, wiadomosc)
-
-        #wysylanie maila
-        #send_mail('Wiadomość z formularza', wiadomosc_mail, email, ['szymbarc@gmail.com'])
+        send_mail('Wiadomość z formularza', wiadomosc_mail, email, ['']) #DO TABLICY WPISAC ADRES DO KTOREGO TRAFIAC BEDA MAILE
 
         return render(request, 'kontakt.html', {'imie' : imie})
     else:

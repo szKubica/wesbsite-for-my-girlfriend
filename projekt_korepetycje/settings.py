@@ -112,8 +112,12 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Ustawienia maila
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = '1025'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = '' #ADRES EMAIL Z KTOREGO BEDZIE WYSYLANY MAIL
+EMAIL_HOST_PASSWORD = '' #HASLO WYGENEROWANE w https://myaccount.google.com/apppasswords
+                        #WCZESNIEJ NALEZY WLACZYĆ DWUSPOPNIOWĄ WERYFIKACJE
+                        #(GMAIL OD MAJA 2022 WYLACZYL OPCJE DOSTEPU ZEWNETRZNYCH APLIKACJI,
+                        #DLATEGO NALEZY ZROBIC TO W TEN SPOSOB)
